@@ -1,0 +1,26 @@
+{
+  "name": "yeoman-gen-run",
+  "version": "1.0.0",
+  "description": "A tool to silently run any installed Yeoman generator with predefined answers",
+  "main": "index.js",
+  "bin": {
+    "yo-gen-run": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Yeoman", "Yeoman-tools", "cli"],
+  "author": {
+    "name": "Sergei Dorogin",
+    "url": "http://about.dorogin.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "inquirer": "^3.0.1",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "yargs": "^6.6.0",
+    "yeoman-environment": "^1.6.6"
+  }
+}
