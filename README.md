@@ -12,14 +12,14 @@ The tool could be helpfull if you need to run a Yeoman generator as part of buil
 
 ## Usage via CLI
 
-If you installed the package globally (`npm i yo-gen-run -g`):  
+If you installed the package globally (`npm i yeoman-gen-run -g`):  
 ```shell
-yo-gen-run --name <generator-anem> --config <path-to-config> --out <name-of-output-dir>
+yo-gen-run --name <generator-name> --config <path-to-config> --out <name-of-output-dir>
 ```
 
 or (if installed locally):  
 ```shell
-node ./node_modules/cli.js --name <generator-anem> --config <path-to-config> --out <name-of-output-dir>
+node ./node_modules/yeoman-gen-run/cli.js --name <generator-name> --config <path-to-config> --out <name-of-output-dir>
 ```
 
 ## Usage via API
