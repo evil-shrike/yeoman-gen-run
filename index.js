@@ -5,11 +5,14 @@ var yeoman  = require('yeoman-environment');
 var Adapter = require('./Adapter');
 
 function runGenerator(genName, config, outDir) {
-	mkdirp.sync(outDir);
-	process.chdir(outDir);
+	if (outDir) {
+		mkdirp.sync(outDir);
+		process.chdir(outDir);
+	}
 
 	var adapter = new Adapter(config.answers, config.options);
-	var env = yeoman.createEnv([], {}, adapter);
+	config.cli = config.cli || {};
+	var env = yeoman.createEnv(config.cli.args || [], config.cli.opts, adapter);
 
 	return new Promise(function (resolve, reject) {
 		env.lookup(function () {

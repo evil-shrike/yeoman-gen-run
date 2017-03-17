@@ -1,7 +1,7 @@
 {
   "name": "yeoman-gen-run",
-  "version": "1.0.0",
-  "description": "A tool to silently run any installed Yeoman generator with predefined answers",
+  "version": "1.1.0",
+  "description": "A tool to non-interactively run any installed Yeoman generator with predefined answers",
   "main": "index.js",
   "bin": {
     "yo-gen-run": "cli.js"

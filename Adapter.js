@@ -35,6 +35,7 @@ DummyPrompt.prototype.run = function () {
 	}
 
 	if (!isSet) {
+		console.log("Encountered an unknown question (absent in the answer file): " + this.question.name);
 		answer = this.question.default;
 
 		if (answer === undefined && this.question.type === 'confirm') {
@@ -51,11 +52,20 @@ function Adapter(answers, options) {
 	this.promptModule = inquirer.createPromptModule();
 	this.options = options || {};
 	this.options.onconflict = this.options.onconflict || 'force';
+
 	Object.keys(this.promptModule.prompts).forEach(function (promptName) {
 		this.promptModule.registerPrompt(promptName, DummyPrompt.bind(DummyPrompt, answers));
 	}, this);
 
 	_.extend(this.log, events.EventEmitter.prototype);
+
+	if (this.options.nolog) {
+		this.log = function () {}
+	} else {
+		this.log = function () {
+			console.log.apply(console, arguments);
+		}
+	}
 
 	// make sure all log methods are defined
 	[
@@ -76,12 +86,8 @@ function Adapter(answers, options) {
 	}, this);
 }
 
-Adapter.prototype.log = function () {
-//  console.log.apply(console, arguments);
-};
-
 Adapter.prototype.diff = function () {
-	console.log("diff");
+	//console.log("diff");
 };
 
 Adapter.prototype.prompt = function (questions, cb) {
