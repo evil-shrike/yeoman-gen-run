@@ -1,6 +1,4 @@
-﻿#!/usr/bin/env node
-
-var yargs 	= require('yargs');
+﻿var yargs 	= require('yargs');
 var runner 	= require('.');
 var path 	= require('path');
 var fs	 	= require('fs');

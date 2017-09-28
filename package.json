@@ -1,20 +1,30 @@
 {
   "name": "yeoman-gen-run",
-  "version": "1.1.0",
+  "version": "1.2.2",
   "description": "A tool to non-interactively run any installed Yeoman generator with predefined answers",
   "main": "index.js",
   "bin": {
-    "yo-gen-run": "cli.js"
+    "yo-gen-run": "cli-bin.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["Yeoman", "Yeoman-tools", "cli"],
+  "keywords": [
+    "Yeoman",
+    "Yeoman-tools",
+    "cli"
+  ],
+  "license": "MIT",
   "author": {
     "name": "Sergei Dorogin",
     "url": "http://about.dorogin.com"
   },
-  "license": "MIT",
+  "homepage": "https://github.com/evil-shrike/yeoman-gen-run",
+  "bugs": "https://github.com/evil-shrike/yeoman-gen-run/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evil-shrike/yeoman-gen-run.git"
+  },
   "dependencies": {
     "bluebird": "^3.4.7",
     "inquirer": "^3.0.1",

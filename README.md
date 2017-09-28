@@ -136,6 +136,17 @@ Default: cwd
 A directory path where the generator will be run.
 
 
+## History
+### 1.2
+* fixed running the cli tool (yo-gen-run) on Linux/Unix 
+
+### 1.1
+* cli-tool (yo-gen-run): `config` is not mandatory, check for config file existence, added `nolog` option, parse additional cli args for generator (via '--')
+* Adapter: nolog option (previously no logging from generator was output to console), by default logging enabled
+* API (runGenerator): support `cli.args`, `cli.opts`, do not change cwd if it wasn't specified (previouly it was always './out')
+
+### 1.0
+
 ## Licence
 
 MIT
